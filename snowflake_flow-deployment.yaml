@@ -1,0 +1,45 @@
+###
+### A complete description of a Prefect Deployment for flow 'snowflake-flow'
+###
+name: snowflake-prefect-test
+description: null
+version: c17d9ca00ca25e7418b4ea1c25289b33
+# The work queue that will handle this deployment's runs
+work_queue_name: default-agent-pool
+work_pool_name: null
+tags: []
+parameters: {}
+schedule: null
+is_schedule_active: null
+infra_overrides: {}
+infrastructure:
+  type: process
+  env: {}
+  labels: {}
+  name: null
+  command: null
+  stream_output: true
+  working_dir: null
+  block_type_slug: process
+  _block_type_slug: process
+
+###
+### DO NOT EDIT BELOW THIS LINE
+###
+flow_name: snowflake-flow
+manifest_path: null
+storage: null
+path: /Users/cconley/terakeet/prefect_test
+entrypoint: snowflake_prefect_test.py:snowflake_flow
+parameter_openapi_schema:
+  title: Parameters
+  type: object
+  properties:
+    block_name:
+      title: block_name
+      position: 0
+      type: string
+  required:
+  - block_name
+  definitions: null
+timestamp: '2023-06-07T19:44:37.854454+00:00'
